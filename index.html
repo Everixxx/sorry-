@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Letter for You</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 🎵 Tampilan awal: pilih musik atau tidak -->
+    <div class="music-choice" id="musicChoice">
+      <h2>Apakah kamu ingin mendengarkan musik saat membaca surat?</h2>
+      <div class="choice-buttons">
+        <button class="btn" onclick="startWithMusic(true)">🎵 Ya, dengan musik</button>
+        <button class="btn" onclick="startWithMusic(false)">🔇 Tidak, tanpa musik</button>
+      </div>
+    </div>
+
+    <!-- ✉️ Tampilan surat -->
+    <div class="intro" id="introText" style="display: none;">
+      i hope you read this, even if it's too late.
+    </div>
+    <button class="btn" id="readBtn" style="display: none;" onclick="showLetter()">Read it</button>
+
+    <div class="letter" id="letterBox">
+      <p id="typedText"></p>
+      <img src="ttd.png" alt="Signature" class="signature" />
+    </div>
+
+    <audio id="bgMusic" src="Andra And The Backbone - Hitamku _ Lirik Lagu (Lyrics) (mp3cut.net).mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
